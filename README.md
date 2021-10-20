@@ -49,4 +49,4 @@ module.exports = (plop) => {
 };
 ```
 
-To run plop, enter the command `npm run plop`
+To run plop, enter the command `npm run plop FCA` to create functional component with styled or `npm run plop SC` to create only styled component

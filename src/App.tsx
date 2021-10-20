@@ -3,6 +3,7 @@ import { theme } from './globalTheme/theme';
 import GlobalStyles from './GlobalStyles/GlobalStyles';
 import { Header } from './Components/Header/Header';
 import { Flex } from './Components/Flex/Flex.styled';
+import { Card } from './Components/Card/Card';
 import { Button } from './Components/Button/Button.styled';
 
 const App = () => (
@@ -10,7 +11,8 @@ const App = () => (
 		<GlobalStyles />
 		<Flex direction="column">
 			<Header />
-			<Flex>
+			<Flex as="main">
+				<Card />
 				<Button>Start</Button>
 				<Button background="tertiary">Restart</Button>
 			</Flex>
@@ -23,7 +25,7 @@ export default App;
 // TODO: create Board component
 // TODO: create Points component
 // TODO: create Cards component
-// TODO: create Button component for New Game and Restar
+// TODO: create Grid component
 // TODO: fetch data from rick and morty API
 // TODO: shuffle data from API
 // TODO: display images
