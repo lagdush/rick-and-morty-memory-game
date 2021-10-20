@@ -1,0 +1,110 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"airbnb",
+		"airbnb/hooks",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"rules": {
+		"react/function-component-definition": [
+			"error",
+			{
+				"namedComponents": "arrow-function",
+				"unnamedComponents": "arrow-function"
+			}
+		],
+		"prefer-arrow-callback": "error",
+		"func-style": ["error", "expression"],
+		"no-use-before-define": "off",
+		"indent": ["error", "tab"],
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"no-console": "error",
+		"no-empty-function": "error",
+		"react/react-in-jsx-scope": 0,
+		"import/extensions": "off",
+		"react/jsx-filename-extension": [
+			2,
+			{ "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+		],
+		"import/order": [
+			"error",
+			{
+				"alphabetize": {
+					"order": "desc",
+					"caseInsensitive": true
+				},
+				"groups": ["builtin", "external", "parent", "sibling", "index"],
+				"pathGroups": [
+					{
+						"pattern": "react",
+						"group": "external",
+						"position": "before"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["builtin"]
+			}
+		],
+		"padding-line-between-statements": [
+			2,
+			// Always require blank lines before return statements.
+			{ "blankLine": "always", "prev": "*", "next": "return" },
+
+			// Always require blank lines before and after , if, switch, try.
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": ["if", "for", "switch", "try"]
+			},
+			{
+				"blankLine": "always",
+				"prev": ["if", "for", "switch", "try"],
+				"next": "*"
+			},
+
+			// Always require blank lines before and after every sequence of variable declarations and export.
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": ["const", "let", "var", "export"]
+			},
+			{
+				"blankLine": "always",
+				"prev": ["const", "let", "var", "export"],
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": ["const", "let", "var", "export"],
+				"next": ["const", "let", "var", "export"]
+			}
+		]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"node": {
+				"paths": ["src"],
+				"extensions": [".js", ".ts", ".tsx"]
+			}
+		}
+	}
+}
