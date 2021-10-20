@@ -1,7 +1,14 @@
+import { ThemeProvider } from 'styled-components';
+import { theme } from './globalTheme/theme';
+import GlobalStyles from './GlobalStyles/GlobalStyles';
+
 const App = () => (
-	<div>
-		<header>Rick and Morty memory Game</header>
-	</div>
+	<ThemeProvider theme={theme}>
+		<GlobalStyles />
+		<div>
+			<header>Rick and Morty memory Game</header>
+		</div>
+	</ThemeProvider>
 );
 
 export default App;

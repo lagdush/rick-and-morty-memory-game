@@ -21,6 +21,13 @@
 	},
 	"plugins": ["react", "@typescript-eslint"],
 	"rules": {
+		"@typescript-eslint/no-empty-interface": [
+			"error",
+			{
+				"allowSingleExtends": true
+			}
+		],
+		"import/prefer-default-export": 0,
 		"react/function-component-definition": [
 			"error",
 			{
