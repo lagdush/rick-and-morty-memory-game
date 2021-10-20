@@ -1,19 +1,25 @@
 import { ThemeProvider } from 'styled-components';
 import { theme } from './globalTheme/theme';
 import GlobalStyles from './GlobalStyles/GlobalStyles';
+import { Header } from './Components/Header/Header';
+import { Flex } from './Components/Flex/Flex.styled';
+import { Button } from './Components/Button/Button.styled';
 
 const App = () => (
 	<ThemeProvider theme={theme}>
 		<GlobalStyles />
-		<div>
-			<header>Rick and Morty memory Game</header>
-		</div>
+		<Flex direction="column">
+			<Header />
+			<Flex>
+				<Button>Start</Button>
+				<Button background="tertiary">Restart</Button>
+			</Flex>
+		</Flex>
 	</ThemeProvider>
 );
 
 export default App;
 
-// TODO: Create Header component
 // TODO: create Board component
 // TODO: create Points component
 // TODO: create Cards component

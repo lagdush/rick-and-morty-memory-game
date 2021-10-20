@@ -1,8 +1,10 @@
 export const theme = {
 	colors: {
-		background: '#3D373C',
-		primary: '#EEECFC',
-		secondary: '#7E7CAD'
+		background: '#fffffe',
+		primary: '#094067',
+		secondary: '#3da9fc',
+		tertiary: '#ef4565',
+		paragraph: '#5f6c7b'
 	},
 	typography: {
 		xs: '0.75rem',
